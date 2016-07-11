@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="studentForm (1).js"></script>
+<script type="text/javascript" src="handlebar.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+
+</head>
+
+<body>
+	
+	<script id="address-template" type="text/x-handlebars-template">
+		<p>
+			{{#each inputs}}
+				<label>{{name}}:</label>
+				<input type="{{type}}" id="{{name}}"><br><br>
+			{{/each}}
+		</p>
+	</script>	
+	<script id="table-template" type="text/x-handlebars-template">
+
+		<p>
+			<table id="studentTable">
+			<tr>
+			{{#each inputs1}}
+				<td><strong>{{type}}</strong></td>
+			{{/each}}
+			<td><strong>Branch</strong></td>
+			</tr>
+			</table>
+		</p>
+	</script>
+	
+	<input type="button" id="student" value="Student">
+	<input type="button" id="employee" value="Employee"><br><br>
+
+<form id="studentForm" class="studentForm">
+	<div class="content-placeholder"></div>
+	Branch:<input type="text" id="branch"><br><br>
+	<input type="button" id="addbtn1" value="Add">
+	<input type="button" id="updatebtn1" value="Update"><br><br>
+	<div class="table-placeholder"></div>
+	
+</form>
+
+
+<form id="employeeForm">
+	<div class="content-placeholder"></div>
+	Salary:<input type="text" id="salary"><br><br>
+	<button id="addbtn">Add</button>
+	<button id="updatebtn">Update</button><br><br>
+	<table id="employeeTable">
+  		<tr>
+    		<td><strong>Name</strong></td>
+    		<td><strong>Email</strong></td>
+    		<td><strong>Course</strong></td>
+    		<td><strong>Salary</strong></td>
+  		</tr>
+	</table>
+</form>
+
+
+</body>
+
+</html>
+
